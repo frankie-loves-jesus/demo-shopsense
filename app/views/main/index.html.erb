@@ -1,0 +1,12 @@
+<h1>Products from the ShopSense API</h1>
+<% if @products.any? %>
+  <% @products.each do |product| %>
+    <div class="product">
+      <%#= image_tag product['image']['url'] %>
+      <%#= product['name'] %>
+      
+      <%= link_to image_tag(product.image.url), product.url %>
+      <%= link_to product.name, product.url %>
+    </div>
+  <% end %>
+<% end %>
